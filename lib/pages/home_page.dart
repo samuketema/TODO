@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo2/pages/add_todo.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -15,7 +16,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context)=> AddTodo()));
+        },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
